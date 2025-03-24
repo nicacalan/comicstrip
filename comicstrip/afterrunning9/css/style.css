@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom, #f5f5fa, #eae7f0, #dcd7e6);
+  color: #2c2c2c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+  animation: softBreathe 16s ease-in-out infinite;
+}
+
+@keyframes softBreathe {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #d4cde2;
+  border-radius: 30px;
+  padding: 60px 50px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  animation: easeIn 2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes easeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 40px;
+  color: #6b5b95;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #e0d6f5;
+  letter-spacing: 1px;
+}
+
+.intro {
+  font-size: 20px;
+  color: #3d3d3d;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.intro em {
+  display: block;
+  font-size: 25pz;
+  color: #9e6ad1;
+  margin-top: 20px;
+  text-shadow: 0 0 8px #e9d8ff;
+  animation: lightPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes lightPulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.02); }
+}
+
+.main-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px #d6cde8;
+  filter: brightness(1.05);
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.choice-card {
+  width: 100%;
+  max-width: 620px;
+  background-color: #ffffffcc;
+  border: 2px solid #c9bada;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #4b3b6d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.choice-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #c3aed6;
+}
+
+.choice-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(1.08);
+}
+
+.choice-card p {
+  margin: 0;
+  padding: 16px;
+  background-color: #f7f2fb;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #6a4c93;
+  text-shadow: 1px 1px #eae2f7;
+}

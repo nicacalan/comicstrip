@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom, #0c001a, #3a0a5d, #1a001f);
+  background-size: 200% 200%;
+  animation: starFade 18s ease-in-out infinite;
+  color: lavenderblush;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+}
+
+@keyframes starFade {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid lavender;
+  border-radius: 30px;
+  padding: 60px 50px;
+  box-shadow: 0 0 90px rgba(255, 255, 255, 0.15);
+  text-align: center;
+  animation: floatReveal 2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes floatReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 25px;
+  text-shadow: 0 0 20px #e6e6fa, 2px 2px #000;
+  letter-spacing: 1.5px;
+}
+
+.intro {
+  font-size: 25px;
+  color: #f3e8ff;
+  line-height: 1.85;
+  font-style: italic;
+  margin-bottom: 45px;
+}
+
+.intro em {
+  display: block;
+  font-size: 30px;
+  color: #f9dfff;
+  margin-top: 20px;
+  text-shadow: 0 0 12px #ffecff;
+  animation: glowWhisper 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowWhisper {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.03); }
+}
+
+.main-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 45px white;
+  filter: brightness(1.1) contrast(1.05);
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.choice-card {
+  width: 100%;
+  max-width: 620px;
+  background: linear-gradient(to bottom right, #ffffff10, #ffffff05);
+  border: 2px solid #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px #999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.choice-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px #fff;
+}
+
+.choice-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(1.05);
+}
+
+.choice-card p {
+  margin: 0;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #f9f9f9;
+  text-shadow: 1px 1px black;
+}

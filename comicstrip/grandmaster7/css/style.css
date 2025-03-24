@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: radial-gradient(ellipse at center, #0a000a 10%, #000000 90%);
+  color: ghostwhite;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+  background-attachment: fixed;
+  animation: darkPulse 12s ease-in-out infinite;
+}
+
+@keyframes darkPulse {
+  0%, 100% { background-color: #000000; }
+  50% { background-color: #0a001a; }
+}
+
+.container {
+  max-width: 800px;
+  background-color: rgba(20, 0, 30, 0.92);
+  border: 3px solid gold;
+  border-radius: 32px;
+  padding: 60px 50px;
+  box-shadow: 0 0 80px rgba(255, 215, 0, 0.1);
+  text-align: center;
+  animation: appearFinal 1.8s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+@keyframes appearFinal {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h1 {
+  font-size: 40px;
+  color: gold;
+  margin-bottom: 25px;
+  text-shadow: 0 0 25px crimson, 2px 2px black;
+  letter-spacing: 2px;
+}
+
+.intro {
+  font-size: 25px;
+  color: #f3e5f5;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 45px;
+}
+
+.intro em {
+  display: block;
+  font-size: 35px;
+  color: lightgoldenrodyellow;
+  margin: 25px 0 10px;
+  animation: flickerFinal 2s infinite alternate;
+  text-shadow: 0 0 12px gold;
+}
+
+@keyframes flickerFinal {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.02); }
+}
+
+.main-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 35px #c9a300;
+  filter: brightness(1.1);
+  animation: spotlightDrift 6s ease-in-out infinite;
+}
+
+@keyframes spotlightDrift {
+  0%, 100% { filter: brightness(1.1); }
+  50% { filter: brightness(1.25); }
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.choice-card {
+  width: 100%;
+  max-width: 620px;
+  background-color: #1a001f;
+  border: 2px solid goldenrod;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 30px black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.choice-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px gold;
+}
+
+.choice-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.choice-card p {
+  margin: 0;
+  padding: 18px;
+  background-color: #300020;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: gold;
+  text-shadow: 1px 1px black;
+}

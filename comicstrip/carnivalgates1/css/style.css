@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: midnightblue;
+  color: floralwhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 700px;
+  padding: 40px;
+  background-color: darkred;
+  border-radius: 20px;
+  box-shadow: 0 0 20px gold;
+  text-align: center;
+}
+
+h1 {
+  color: gold;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.intro {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: lemonchiffon;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px white;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.choice-card {
+  text-decoration: none;
+  background-color: maroon;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px gold;
+  color: white;
+  cursor: pointer;
+}
+
+.choice-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px gold;
+}
+
+.choice-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.choice-card p {
+  margin: 0;
+  padding: 12px;
+  font-size: 20px;
+  background-color: darkred;
+  text-align: center;
+  font-weight: bold;
+}
